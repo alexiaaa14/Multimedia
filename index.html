@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundboard</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <h1>Soundboard</h1>
+
+    <div id="soundboard">
+        <div class="pad red">Sound 1</div>
+        <div class="pad blue">Sound 2</div>
+        <div class="pad green">Sound 3</div>
+        <div class="pad yellow">Sound 4</div>
+        <div class="pad purple">Sound 5</div>
+        <div class="pad orange">Sound 6</div>
+        <div class="pad pink">Sound 7</div>
+        <div class="pad cyan">Sound 8</div>
+        <div class="pad lime">Sound 9</div>
+        <div class="pad gray">Sound 10</div>
+    </div>
+
+    <script>
+       
+        const pads = document.querySelectorAll('.pad');
+        pads.forEach(pad => {
+            pad.addEventListener('click', () => {
+                pad.classList.add('active');
+                setTimeout(() => pad.classList.remove('active'), 200);
+            });
+        });
+    </script>
+</body>
+</html>
