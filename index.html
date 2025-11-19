@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+    <canvas id="visualizerCanvas"></canvas> 
+    
     <h1>Soundboard</h1>
 
     <div id="soundboard">
@@ -22,15 +24,6 @@
         <div class="pad gray">Sound 10</div>
     </div>
 
-    <script>
-       
-        const pads = document.querySelectorAll('.pad');
-        pads.forEach(pad => {
-            pad.addEventListener('click', () => {
-                pad.classList.add('active');
-                setTimeout(() => pad.classList.remove('active'), 200);
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
